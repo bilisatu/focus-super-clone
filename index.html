@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Focus → Turn Notion into a Website</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Focus → Turn Notion into a Website</title>
+      <meta name="description" content="Turn your Notion pages into a fast, beautiful website in seconds. No code, no hosting—just connect Notion and publish.">
+      <meta property="og:title" content="Focus – Turn Notion into a Website"/>
+      <meta property="og:description" content="Turn your Notion pages into a fast, beautiful website in seconds. No code, no hosting—just connect Notion and publish."/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:image" content="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"/>
+      <meta property="og:url" content="https://example.com/"/>
+      <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     </head>
 
     <body>
 
-        <nav class="nav">
-            <div class="logo">Focus</div>
-            <div class="nav-links">
-                <a href="#">Features</a>
-                <a href="#">Templates</a>
-                <a href="#">Pricing</a>
-                <a href="#" class="btn-login">Log in</a>
-                <a href="#" class="btn-started">Get Started Free</a>
-            </div>
+      <nav class="nav" role="navigation" aria-label="Main">
+          <div class="logo">Focus</div>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+              <span class="theme-icon">🌙</span>
+            </button>
+          </div>
+          <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#templates">Templates</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#" class="btn-login">Log in</a>
+            <a href="#pricing" class="btn-started">Get Started Free</a>
+          </div>
         </nav>
 
-        <section class="hero">
+        <main>
+        <section class="hero" id="hero">
             <div class="hero-left">
                 <h1>Turn your Notion pages into a<br><span class="gradient">fast, beautiful website</span></h1>
                 <p>No code. No hosting. Just connect your Notion → get a live site in seconds.</p>
@@ -32,23 +50,29 @@
             </div>
 
             <div class="hero-right">
-                <img src="https://super.so/og.png" alt="Focus Preview" class="preview-img"/>
+              <img 
+                src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                srcset="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=700 700w,
+                        https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                alt="Focus dashboard preview on laptop"
+                class="preview-img"
+              />
             </div>
         </section>
 
-        <section class="trusted">
-            <p>Trusted by the World's most ambitious teams</p>
-            <div class="logo">
-                <img src="https://super.so/logos/loom.svg" alt="Loom"/>
-      <img src="https://super.so/logos/figma.svg" alt="Figma"/>
-      <img src="https://super.so/logos/notion.svg" alt="Notion"/>
-      <img src="https://super.so/logos/intercom.svg" alt="Intercom"/>
-      <img src="https://super.so/logos/lattice.svg" alt="Lattice"/>
-      <img src="https://super.so/logos/plaid.svg" alt="Plaid"/>
-            </div>
+        <section class="trusted" aria-label="Trusted companies">
+            <p>Trusted by teams who ship fast</p>
+          <div class="logos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion logo" loading="lazy"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma logo" loading="lazy"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png" alt="Slack logo" loading="lazy"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Stripe_Logo%2C_revised_2016.svg" alt="Stripe logo" loading="lazy"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Asana_logo.svg" alt="Asana logo" loading="lazy"/>
+          </div>
         </section>
 
-        <section class="features">
+        <section class="features" id="features" aria-label="Key features">
             <div class="feature">
                 <div class="icon">🚀</div>
                 <h3>Lightning Fast</h3>
@@ -74,14 +98,13 @@
             </div>
         </section>
 
-          <!-- TESTIMONIALS -->
-  <section class="testimonials">
+  <section class="testimonials" aria-label="Customer testimonials">
     <h2>Don’t just take our word for it</h2>
     <div class="testimonial-grid">
       <div class="card">
         <p>“Focus saved me weeks of development. I launched my portfolio in one afternoon and got 3 client inquiries the same week.”</p>
         <div class="author">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David"/>
+          <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" alt="David" loading="lazy"/>
           <div>
             <strong>David Okello</strong>
             <span>Founder, Okello Studio</span>
@@ -91,7 +114,7 @@
       <div class="card">
         <p>“I’m not technical at all. Connected my Notion page and had a live site in 4 minutes. Mind blown.”</p>
         <div class="author">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah"/>
+          <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Sarah" loading="lazy"/>
           <div>
             <strong>Sarah Kimani</strong>
             <span>Content Creator, 120k followers</span>
@@ -101,7 +124,7 @@
       <div class="card">
         <p>“Best decision for our startup. Professional site, zero maintenance, and we rank #1 on Google now.”</p>
         <div class="author">
-          <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Michael"/>
+          <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Michael" loading="lazy"/>
           <div>
             <strong>Michael Tadesse</strong>
             <span>CEO, EthioPay</span>
@@ -111,8 +134,7 @@
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="pricing">
+  <section class="pricing" id="pricing" aria-label="Pricing plans">
     <h2>Simple, transparent pricing</h2>
     <p class="subtitle">Always know what you’ll pay. Cancel anytime.</p>
     <div class="pricing-cards">
@@ -153,16 +175,33 @@
       </div>
     </div>
   </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer-content">
       <div class="logo-footer">Focus</div>
-      <p>Turn your Notion into a website in seconds.</p>
-      <p>© 2025 Focus. All rights reserved.</p>
+      <div>
+        <p>Turn your Notion into a website in seconds.</p>
+        <p>© 2025 Focus. All rights reserved.</p>
+        <p class="footer-credit">Made with ♥ by Safraeel</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
+      </div>
     </div>
   </footer>
 
         <script src="script.js"></script>
+        <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/sw.js').catch(console.error);
+            });
+          }
+        </script>
     </body>
 </html>
