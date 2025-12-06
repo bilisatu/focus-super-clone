@@ -372,18 +372,23 @@ body.dark .trusted {
 .logos {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 32px;
     flex-wrap: wrap;
 }
 
 .logos img, .logos svg {
-    max-height: 32px;
+    max-height: 28px;
+    max-width: 110px;
     width: auto;
     object-fit: contain;
-    opacity: 0.7;
+    opacity: 0.8;
     filter: grayscale(100%);
     transition: 0.3s;
     display: block;
+}
+
+.logos img {
+    background-color: transparent;
 }
 
 .logos img:hover, .logos svg:hover {
